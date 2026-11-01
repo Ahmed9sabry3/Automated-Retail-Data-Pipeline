@@ -1,0 +1,22 @@
+[2026-05-08T19:56:46.615+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-05-08T19:56:46.695+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_pipeline.ingestion manual__2026-05-08T19:56:43.495666+00:00 [queued]>
+[2026-05-08T19:56:46.709+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_pipeline.ingestion manual__2026-05-08T19:56:43.495666+00:00 [queued]>
+[2026-05-08T19:56:46.710+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 1
+[2026-05-08T19:56:46.727+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): ingestion> on 2026-05-08 19:56:43.495666+00:00
+[2026-05-08T19:56:46.739+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'etl_pipeline', 'ingestion', 'manual__2026-05-08T19:56:43.495666+00:00', '--job-id', '23', '--raw', '--subdir', 'DAGS_FOLDER/retail_dag.py', '--cfg-path', '/tmp/tmpnv2fdavd']
+[2026-05-08T19:56:46.742+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=749) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-05-08T19:56:46.743+0000] {standard_task_runner.py:91} INFO - Job 23: Subtask ingestion
+[2026-05-08T19:56:46.744+0000] {standard_task_runner.py:63} INFO - Started process 790 to run task
+[2026-05-08T19:56:47.199+0000] {task_command.py:426} INFO - Running <TaskInstance: etl_pipeline.ingestion manual__2026-05-08T19:56:43.495666+00:00 [running]> on host 44fbe7c7daca
+[2026-05-08T19:56:47.908+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='etl_pipeline' AIRFLOW_CTX_TASK_ID='ingestion' AIRFLOW_CTX_EXECUTION_DATE='2026-05-08T19:56:43.495666+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-08T19:56:43.495666+00:00'
+[2026-05-08T19:56:47.914+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-05-08T19:56:47.915+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-05-08T19:56:47.918+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/airflow/ingestion/ingestion.py']
+[2026-05-08T19:56:47.942+0000] {subprocess.py:86} INFO - Output:
+[2026-05-08T19:56:52.780+0000] {subprocess.py:93} INFO - Successfully loaded 6435 rows.
+[2026-05-08T19:56:53.028+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-05-08T19:56:53.031+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-05-08T19:56:53.202+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=etl_pipeline, task_id=ingestion, execution_date=20260508T195643, start_date=20260508T195646, end_date=20260508T195653
+[2026-05-08T19:56:53.294+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-05-08T19:56:53.440+0000] {taskinstance.py:3482} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-05-08T19:56:53.446+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

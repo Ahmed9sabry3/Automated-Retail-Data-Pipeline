@@ -1,0 +1,1 @@
+[2026-04-28T00:04:07.053+0000] {task_context_logger.py:104} ERROR - Executor reports task instance <TaskInstance: dbt_orchestration.dbt_run manual__2026-04-28T00:03:47.850366+00:00 [queued]> finished (failed) although the task says it's queued. (Info: None) Was the task killed externally?

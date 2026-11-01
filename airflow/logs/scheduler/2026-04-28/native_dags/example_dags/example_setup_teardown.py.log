@@ -1,0 +1,112 @@
+[2026-04-28T00:00:23.355+0000] {processor.py:161} INFO - Started process (PID=156) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2026-04-28T00:00:23.357+0000] {processor.py:830} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py for tasks to queue
+[2026-04-28T00:00:23.359+0000] {logging_mixin.py:188} INFO - [2026-04-28T00:00:23.359+0000] {dagbag.py:540} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2026-04-28T00:00:23.380+0000] {processor.py:840} INFO - DAG(s) 'example_setup_teardown' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2026-04-28T00:00:23.409+0000] {logging_mixin.py:188} INFO - [2026-04-28T00:00:23.408+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-28T00:00:23.575+0000] {logging_mixin.py:188} INFO - [2026-04-28T00:00:23.574+0000] {dag.py:3954} INFO - Setting next_dagrun for example_setup_teardown to 2026-04-27 00:00:00+00:00, run_after=2026-04-28 00:00:00+00:00
+[2026-04-28T00:00:23.609+0000] {processor.py:183} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py took 0.260 seconds
+[2026-04-28T00:04:09.122+0000] {processor.py:161} INFO - Started process (PID=244) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2026-04-28T00:04:09.124+0000] {processor.py:830} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py for tasks to queue
+[2026-04-28T00:04:09.126+0000] {logging_mixin.py:188} INFO - [2026-04-28T00:04:09.125+0000] {dagbag.py:540} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2026-04-28T00:04:09.141+0000] {processor.py:840} INFO - DAG(s) 'example_setup_teardown' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2026-04-28T00:04:09.172+0000] {logging_mixin.py:188} INFO - [2026-04-28T00:04:09.172+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-28T00:04:10.300+0000] {logging_mixin.py:188} INFO - [2026-04-28T00:04:10.299+0000] {dag.py:3954} INFO - Setting next_dagrun for example_setup_teardown to 2026-04-27 00:00:00+00:00, run_after=2026-04-28 00:00:00+00:00
+[2026-04-28T00:04:10.340+0000] {processor.py:183} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py took 1.227 seconds
+[2026-04-28T00:05:48.082+0000] {processor.py:161} INFO - Started process (PID=306) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2026-04-28T00:05:48.084+0000] {processor.py:830} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py for tasks to queue
+[2026-04-28T00:05:48.085+0000] {logging_mixin.py:188} INFO - [2026-04-28T00:05:48.085+0000] {dagbag.py:540} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2026-04-28T00:05:48.102+0000] {processor.py:840} INFO - DAG(s) 'example_setup_teardown' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2026-04-28T00:05:57.393+0000] {logging_mixin.py:188} INFO - [2026-04-28T00:05:57.392+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-28T00:06:04.779+0000] {logging_mixin.py:188} INFO - [2026-04-28T00:06:04.779+0000] {dag.py:3954} INFO - Setting next_dagrun for example_setup_teardown to 2026-04-27 00:00:00+00:00, run_after=2026-04-28 00:00:00+00:00
+[2026-04-28T00:06:05.280+0000] {processor.py:183} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py took 17.271 seconds
+[2026-04-28T00:06:36.430+0000] {processor.py:161} INFO - Started process (PID=372) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2026-04-28T00:06:36.431+0000] {processor.py:830} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py for tasks to queue
+[2026-04-28T00:06:36.432+0000] {logging_mixin.py:188} INFO - [2026-04-28T00:06:36.432+0000] {dagbag.py:540} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2026-04-28T00:06:36.441+0000] {processor.py:840} INFO - DAG(s) 'example_setup_teardown' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2026-04-28T00:06:36.463+0000] {logging_mixin.py:188} INFO - [2026-04-28T00:06:36.463+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-28T00:06:36.486+0000] {logging_mixin.py:188} INFO - [2026-04-28T00:06:36.486+0000] {dag.py:3954} INFO - Setting next_dagrun for example_setup_teardown to 2026-04-27 00:00:00+00:00, run_after=2026-04-28 00:00:00+00:00
+[2026-04-28T00:06:36.506+0000] {processor.py:183} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py took 0.083 seconds
+[2026-04-28T00:07:06.639+0000] {processor.py:161} INFO - Started process (PID=431) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2026-04-28T00:07:06.641+0000] {processor.py:830} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py for tasks to queue
+[2026-04-28T00:07:06.642+0000] {logging_mixin.py:188} INFO - [2026-04-28T00:07:06.642+0000] {dagbag.py:540} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2026-04-28T00:07:06.650+0000] {processor.py:840} INFO - DAG(s) 'example_setup_teardown' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2026-04-28T00:07:06.673+0000] {logging_mixin.py:188} INFO - [2026-04-28T00:07:06.673+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-28T00:07:06.695+0000] {logging_mixin.py:188} INFO - [2026-04-28T00:07:06.695+0000] {dag.py:3954} INFO - Setting next_dagrun for example_setup_teardown to 2026-04-27 00:00:00+00:00, run_after=2026-04-28 00:00:00+00:00
+[2026-04-28T00:07:06.715+0000] {processor.py:183} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py took 0.082 seconds
+[2026-04-28T00:07:37.604+0000] {processor.py:161} INFO - Started process (PID=489) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2026-04-28T00:07:37.605+0000] {processor.py:830} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py for tasks to queue
+[2026-04-28T00:07:37.607+0000] {logging_mixin.py:188} INFO - [2026-04-28T00:07:37.607+0000] {dagbag.py:540} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2026-04-28T00:07:37.617+0000] {processor.py:840} INFO - DAG(s) 'example_setup_teardown' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2026-04-28T00:07:37.642+0000] {logging_mixin.py:188} INFO - [2026-04-28T00:07:37.642+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-28T00:07:37.673+0000] {logging_mixin.py:188} INFO - [2026-04-28T00:07:37.673+0000] {dag.py:3954} INFO - Setting next_dagrun for example_setup_teardown to 2026-04-27 00:00:00+00:00, run_after=2026-04-28 00:00:00+00:00
+[2026-04-28T00:07:37.698+0000] {processor.py:183} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py took 0.101 seconds
+[2026-04-28T00:08:08.456+0000] {processor.py:161} INFO - Started process (PID=548) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2026-04-28T00:08:08.457+0000] {processor.py:830} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py for tasks to queue
+[2026-04-28T00:08:08.458+0000] {logging_mixin.py:188} INFO - [2026-04-28T00:08:08.458+0000] {dagbag.py:540} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2026-04-28T00:08:08.467+0000] {processor.py:840} INFO - DAG(s) 'example_setup_teardown' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2026-04-28T00:08:08.490+0000] {logging_mixin.py:188} INFO - [2026-04-28T00:08:08.490+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-28T00:08:08.514+0000] {logging_mixin.py:188} INFO - [2026-04-28T00:08:08.514+0000] {dag.py:3954} INFO - Setting next_dagrun for example_setup_teardown to 2026-04-27 00:00:00+00:00, run_after=2026-04-28 00:00:00+00:00
+[2026-04-28T00:08:08.534+0000] {processor.py:183} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py took 0.084 seconds
+[2026-04-28T00:08:39.038+0000] {processor.py:161} INFO - Started process (PID=607) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2026-04-28T00:08:39.039+0000] {processor.py:830} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py for tasks to queue
+[2026-04-28T00:08:39.040+0000] {logging_mixin.py:188} INFO - [2026-04-28T00:08:39.040+0000] {dagbag.py:540} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2026-04-28T00:08:39.051+0000] {processor.py:840} INFO - DAG(s) 'example_setup_teardown' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2026-04-28T00:08:39.075+0000] {logging_mixin.py:188} INFO - [2026-04-28T00:08:39.075+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-28T00:08:39.102+0000] {logging_mixin.py:188} INFO - [2026-04-28T00:08:39.102+0000] {dag.py:3954} INFO - Setting next_dagrun for example_setup_teardown to 2026-04-27 00:00:00+00:00, run_after=2026-04-28 00:00:00+00:00
+[2026-04-28T00:08:39.125+0000] {processor.py:183} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py took 0.094 seconds
+[2026-04-28T00:09:09.268+0000] {processor.py:161} INFO - Started process (PID=666) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2026-04-28T00:09:09.270+0000] {processor.py:830} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py for tasks to queue
+[2026-04-28T00:09:09.271+0000] {logging_mixin.py:188} INFO - [2026-04-28T00:09:09.270+0000] {dagbag.py:540} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2026-04-28T00:09:09.281+0000] {processor.py:840} INFO - DAG(s) 'example_setup_teardown' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2026-04-28T00:09:09.308+0000] {logging_mixin.py:188} INFO - [2026-04-28T00:09:09.308+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-28T00:09:09.336+0000] {logging_mixin.py:188} INFO - [2026-04-28T00:09:09.336+0000] {dag.py:3954} INFO - Setting next_dagrun for example_setup_teardown to 2026-04-27 00:00:00+00:00, run_after=2026-04-28 00:00:00+00:00
+[2026-04-28T00:09:09.370+0000] {processor.py:183} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py took 0.109 seconds
+[2026-04-28T00:09:40.293+0000] {processor.py:161} INFO - Started process (PID=725) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2026-04-28T00:09:40.295+0000] {processor.py:830} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py for tasks to queue
+[2026-04-28T00:09:40.297+0000] {logging_mixin.py:188} INFO - [2026-04-28T00:09:40.296+0000] {dagbag.py:540} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2026-04-28T00:09:40.311+0000] {processor.py:840} INFO - DAG(s) 'example_setup_teardown' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2026-04-28T00:09:40.346+0000] {logging_mixin.py:188} INFO - [2026-04-28T00:09:40.345+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-28T00:09:40.377+0000] {logging_mixin.py:188} INFO - [2026-04-28T00:09:40.377+0000] {dag.py:3954} INFO - Setting next_dagrun for example_setup_teardown to 2026-04-27 00:00:00+00:00, run_after=2026-04-28 00:00:00+00:00
+[2026-04-28T00:09:40.405+0000] {processor.py:183} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py took 0.128 seconds
+[2026-04-28T00:10:10.584+0000] {processor.py:161} INFO - Started process (PID=784) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2026-04-28T00:10:10.585+0000] {processor.py:830} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py for tasks to queue
+[2026-04-28T00:10:10.586+0000] {logging_mixin.py:188} INFO - [2026-04-28T00:10:10.586+0000] {dagbag.py:540} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2026-04-28T00:10:10.595+0000] {processor.py:840} INFO - DAG(s) 'example_setup_teardown' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2026-04-28T00:10:10.619+0000] {logging_mixin.py:188} INFO - [2026-04-28T00:10:10.619+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-28T00:10:10.642+0000] {logging_mixin.py:188} INFO - [2026-04-28T00:10:10.642+0000] {dag.py:3954} INFO - Setting next_dagrun for example_setup_teardown to 2026-04-27 00:00:00+00:00, run_after=2026-04-28 00:00:00+00:00
+[2026-04-28T00:10:10.667+0000] {processor.py:183} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py took 0.090 seconds
+[2026-04-28T00:10:40.991+0000] {processor.py:161} INFO - Started process (PID=843) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2026-04-28T00:10:40.992+0000] {processor.py:830} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py for tasks to queue
+[2026-04-28T00:10:40.993+0000] {logging_mixin.py:188} INFO - [2026-04-28T00:10:40.993+0000] {dagbag.py:540} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2026-04-28T00:10:41.001+0000] {processor.py:840} INFO - DAG(s) 'example_setup_teardown' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2026-04-28T00:10:41.028+0000] {logging_mixin.py:188} INFO - [2026-04-28T00:10:41.028+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-28T00:10:41.056+0000] {logging_mixin.py:188} INFO - [2026-04-28T00:10:41.056+0000] {dag.py:3954} INFO - Setting next_dagrun for example_setup_teardown to 2026-04-27 00:00:00+00:00, run_after=2026-04-28 00:00:00+00:00
+[2026-04-28T00:10:41.079+0000] {processor.py:183} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py took 0.094 seconds
+[2026-04-28T00:11:11.528+0000] {processor.py:161} INFO - Started process (PID=902) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2026-04-28T00:11:11.530+0000] {processor.py:830} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py for tasks to queue
+[2026-04-28T00:11:11.531+0000] {logging_mixin.py:188} INFO - [2026-04-28T00:11:11.531+0000] {dagbag.py:540} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2026-04-28T00:11:11.540+0000] {processor.py:840} INFO - DAG(s) 'example_setup_teardown' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2026-04-28T00:11:11.564+0000] {logging_mixin.py:188} INFO - [2026-04-28T00:11:11.564+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-28T00:11:11.603+0000] {logging_mixin.py:188} INFO - [2026-04-28T00:11:11.603+0000] {dag.py:3954} INFO - Setting next_dagrun for example_setup_teardown to 2026-04-27 00:00:00+00:00, run_after=2026-04-28 00:00:00+00:00
+[2026-04-28T00:11:11.636+0000] {processor.py:183} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py took 0.115 seconds
+[2026-04-28T00:11:44.034+0000] {processor.py:161} INFO - Started process (PID=961) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2026-04-28T00:11:44.035+0000] {processor.py:830} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py for tasks to queue
+[2026-04-28T00:11:44.037+0000] {logging_mixin.py:188} INFO - [2026-04-28T00:11:44.036+0000] {dagbag.py:540} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2026-04-28T00:11:44.046+0000] {processor.py:840} INFO - DAG(s) 'example_setup_teardown' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2026-04-28T00:11:44.069+0000] {logging_mixin.py:188} INFO - [2026-04-28T00:11:44.069+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-28T00:11:44.093+0000] {logging_mixin.py:188} INFO - [2026-04-28T00:11:44.093+0000] {dag.py:3954} INFO - Setting next_dagrun for example_setup_teardown to 2026-04-27 00:00:00+00:00, run_after=2026-04-28 00:00:00+00:00
+[2026-04-28T00:11:44.118+0000] {processor.py:183} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py took 0.091 seconds
+[2026-04-28T00:12:14.186+0000] {processor.py:161} INFO - Started process (PID=1020) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2026-04-28T00:12:14.188+0000] {processor.py:830} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py for tasks to queue
+[2026-04-28T00:12:14.189+0000] {logging_mixin.py:188} INFO - [2026-04-28T00:12:14.188+0000] {dagbag.py:540} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2026-04-28T00:12:14.197+0000] {processor.py:840} INFO - DAG(s) 'example_setup_teardown' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2026-04-28T00:12:14.220+0000] {logging_mixin.py:188} INFO - [2026-04-28T00:12:14.220+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-28T00:12:14.242+0000] {logging_mixin.py:188} INFO - [2026-04-28T00:12:14.242+0000] {dag.py:3954} INFO - Setting next_dagrun for example_setup_teardown to 2026-04-27 00:00:00+00:00, run_after=2026-04-28 00:00:00+00:00
+[2026-04-28T00:12:14.263+0000] {processor.py:183} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py took 0.083 seconds
+[2026-04-28T00:12:44.577+0000] {processor.py:161} INFO - Started process (PID=1079) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2026-04-28T00:12:44.579+0000] {processor.py:830} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py for tasks to queue
+[2026-04-28T00:12:44.580+0000] {logging_mixin.py:188} INFO - [2026-04-28T00:12:44.579+0000] {dagbag.py:540} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2026-04-28T00:12:44.588+0000] {processor.py:840} INFO - DAG(s) 'example_setup_teardown' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2026-04-28T00:12:44.612+0000] {logging_mixin.py:188} INFO - [2026-04-28T00:12:44.612+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-04-28T00:12:44.634+0000] {logging_mixin.py:188} INFO - [2026-04-28T00:12:44.634+0000] {dag.py:3954} INFO - Setting next_dagrun for example_setup_teardown to 2026-04-27 00:00:00+00:00, run_after=2026-04-28 00:00:00+00:00
+[2026-04-28T00:12:44.659+0000] {processor.py:183} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py took 0.089 seconds

@@ -1,0 +1,64 @@
+[2026-05-01T20:43:56.115+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-05-01T20:43:56.169+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dbt_orchestration.dbt_debug manual__2026-05-01T20:43:53.973308+00:00 [queued]>
+[2026-05-01T20:43:56.184+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dbt_orchestration.dbt_debug manual__2026-05-01T20:43:53.973308+00:00 [queued]>
+[2026-05-01T20:43:56.185+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 1
+[2026-05-01T20:43:56.207+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): dbt_debug> on 2026-05-01 20:43:53.973308+00:00
+[2026-05-01T20:43:56.219+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'dbt_orchestration', 'dbt_debug', 'manual__2026-05-01T20:43:53.973308+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/retail_dag.py', '--cfg-path', '/tmp/tmpmqri2iqx']
+[2026-05-01T20:43:56.221+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=2799) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-05-01T20:43:56.222+0000] {standard_task_runner.py:91} INFO - Job 3: Subtask dbt_debug
+[2026-05-01T20:43:56.223+0000] {standard_task_runner.py:63} INFO - Started process 2814 to run task
+[2026-05-01T20:43:56.356+0000] {task_command.py:426} INFO - Running <TaskInstance: dbt_orchestration.dbt_debug manual__2026-05-01T20:43:53.973308+00:00 [running]> on host 91e4dfdf5c9a
+[2026-05-01T20:43:56.474+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dbt_orchestration' AIRFLOW_CTX_TASK_ID='dbt_debug' AIRFLOW_CTX_EXECUTION_DATE='2026-05-01T20:43:53.973308+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-01T20:43:53.973308+00:00'
+[2026-05-01T20:43:56.480+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-05-01T20:43:56.482+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-05-01T20:43:56.486+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\n        cd /opt/***/dbt_project &&         dbt debug --profiles-dir /opt/***/dbt_project\n        ']
+[2026-05-01T20:43:56.504+0000] {subprocess.py:86} INFO - Output:
+[2026-05-01T20:44:02.296+0000] {subprocess.py:93} INFO - [0m20:44:02  Running with dbt=1.7.14
+[2026-05-01T20:44:02.300+0000] {subprocess.py:93} INFO - [0m20:44:02  dbt version: 1.7.14
+[2026-05-01T20:44:02.302+0000] {subprocess.py:93} INFO - [0m20:44:02  python version: 3.12.2
+[2026-05-01T20:44:02.304+0000] {subprocess.py:93} INFO - [0m20:44:02  python path: /home/***/.local/bin/python
+[2026-05-01T20:44:02.306+0000] {subprocess.py:93} INFO - [0m20:44:02  os info: Linux-6.6.87.1-microsoft-standard-WSL2-x86_64-with-glibc2.36
+[2026-05-01T20:44:02.310+0000] {subprocess.py:93} INFO - [0m20:44:02  Encountered an error:
+[2026-05-01T20:44:02.311+0000] {subprocess.py:93} INFO - [Errno 21] Is a directory: '/opt/***/dbt_project/profiles.yml'
+[2026-05-01T20:44:02.317+0000] {subprocess.py:93} INFO - [0m20:44:02  Traceback (most recent call last):
+[2026-05-01T20:44:02.319+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/dbt/cli/requires.py", line 91, in wrapper
+[2026-05-01T20:44:02.321+0000] {subprocess.py:93} INFO -     result, success = func(*args, **kwargs)
+[2026-05-01T20:44:02.321+0000] {subprocess.py:93} INFO -                       ^^^^^^^^^^^^^^^^^^^^^
+[2026-05-01T20:44:02.322+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/dbt/cli/requires.py", line 76, in wrapper
+[2026-05-01T20:44:02.323+0000] {subprocess.py:93} INFO -     return func(*args, **kwargs)
+[2026-05-01T20:44:02.324+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^
+[2026-05-01T20:44:02.325+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/dbt/cli/main.py", line 444, in debug
+[2026-05-01T20:44:02.326+0000] {subprocess.py:93} INFO -     results = task.run()
+[2026-05-01T20:44:02.327+0000] {subprocess.py:93} INFO -               ^^^^^^^^^^
+[2026-05-01T20:44:02.327+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/dbt/task/debug.py", line 123, in run
+[2026-05-01T20:44:02.328+0000] {subprocess.py:93} INFO -     load_profile_status: SubtaskStatus = self._load_profile()
+[2026-05-01T20:44:02.328+0000] {subprocess.py:93} INFO -                                          ^^^^^^^^^^^^^^^^^^^^
+[2026-05-01T20:44:02.329+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/dbt/task/debug.py", line 203, in _load_profile
+[2026-05-01T20:44:02.330+0000] {subprocess.py:93} INFO -     raw_profile_data = load_yaml_text(dbt.clients.system.load_file_contents(self.profile_path))
+[2026-05-01T20:44:02.330+0000] {subprocess.py:93} INFO -                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-01T20:44:02.331+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/dbt/clients/system.py", line 97, in load_file_contents
+[2026-05-01T20:44:02.331+0000] {subprocess.py:93} INFO -     with open(path, "rb") as handle:
+[2026-05-01T20:44:02.332+0000] {subprocess.py:93} INFO -          ^^^^^^^^^^^^^^^^
+[2026-05-01T20:44:02.334+0000] {subprocess.py:93} INFO - IsADirectoryError: [Errno 21] Is a directory: '/opt/***/dbt_project/profiles.yml'
+[2026-05-01T20:44:02.336+0000] {subprocess.py:93} INFO - 
+[2026-05-01T20:44:03.537+0000] {subprocess.py:97} INFO - Command exited with return code 2
+[2026-05-01T20:44:03.538+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-05-01T20:44:03.554+0000] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2026-05-01T20:44:03.561+0000] {taskinstance.py:1205} INFO - Marking task as FAILED. dag_id=dbt_orchestration, task_id=dbt_debug, execution_date=20260501T204353, start_date=20260501T204356, end_date=20260501T204403
+[2026-05-01T20:44:03.579+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 3 for task dbt_debug (Bash command failed. The command returned a non-zero exit code 2.; 2814)
+[2026-05-01T20:44:03.627+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2026-05-01T20:44:03.653+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-05-01T20:44:03.658+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

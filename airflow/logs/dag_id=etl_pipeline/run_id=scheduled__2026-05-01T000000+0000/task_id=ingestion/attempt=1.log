@@ -1,0 +1,418 @@
+[2026-05-02T00:00:03.570+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-05-02T00:00:03.602+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_pipeline.ingestion scheduled__2026-05-01T00:00:00+00:00 [queued]>
+[2026-05-02T00:00:03.608+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_pipeline.ingestion scheduled__2026-05-01T00:00:00+00:00 [queued]>
+[2026-05-02T00:00:03.609+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 1
+[2026-05-02T00:00:03.622+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): ingestion> on 2026-05-01 00:00:00+00:00
+[2026-05-02T00:00:03.815+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=37990) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-05-02T00:00:03.818+0000] {standard_task_runner.py:63} INFO - Started process 38076 to run task
+[2026-05-02T00:00:03.884+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'etl_pipeline', 'ingestion', 'scheduled__2026-05-01T00:00:00+00:00', '--job-id', '100', '--raw', '--subdir', 'DAGS_FOLDER/retail_dag.py', '--cfg-path', '/tmp/tmpxt3igz46']
+[2026-05-02T00:00:03.886+0000] {standard_task_runner.py:91} INFO - Job 100: Subtask ingestion
+[2026-05-02T00:00:03.951+0000] {task_command.py:426} INFO - Running <TaskInstance: etl_pipeline.ingestion scheduled__2026-05-01T00:00:00+00:00 [running]> on host d788deae82f9
+[2026-05-02T00:00:04.106+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_pipeline' AIRFLOW_CTX_TASK_ID='ingestion' AIRFLOW_CTX_EXECUTION_DATE='2026-05-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-05-01T00:00:00+00:00'
+[2026-05-02T00:00:04.109+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-05-02T00:00:04.110+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-05-02T00:00:04.111+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/ingestion/ingestion.py']
+[2026-05-02T00:00:04.192+0000] {subprocess.py:86} INFO - Output:
+[2026-05-02T00:00:07.842+0000] {subprocess.py:93} INFO - Loaded rows: 6435
+[2026-05-02T00:00:07.843+0000] {subprocess.py:93} INFO - Saved parquet file
+[2026-05-02T00:00:07.844+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2026-05-02T00:00:07.844+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+[2026-05-02T00:00:07.845+0000] {subprocess.py:93} INFO -     return fn()
+[2026-05-02T00:00:07.846+0000] {subprocess.py:93} INFO -            ^^^^
+[2026-05-02T00:00:07.846+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+[2026-05-02T00:00:07.847+0000] {subprocess.py:93} INFO -     return _ConnectionFairy._checkout(self)
+[2026-05-02T00:00:07.847+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-02T00:00:07.848+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+[2026-05-02T00:00:07.848+0000] {subprocess.py:93} INFO -     fairy = _ConnectionRecord.checkout(pool)
+[2026-05-02T00:00:07.849+0000] {subprocess.py:93} INFO -             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-02T00:00:07.849+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+[2026-05-02T00:00:07.850+0000] {subprocess.py:93} INFO -     rec = pool._do_get()
+[2026-05-02T00:00:07.851+0000] {subprocess.py:93} INFO -           ^^^^^^^^^^^^^^
+[2026-05-02T00:00:07.851+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/sqlalchemy/pool/impl.py", line 145, in _do_get
+[2026-05-02T00:00:07.852+0000] {subprocess.py:93} INFO -     with util.safe_reraise():
+[2026-05-02T00:00:07.852+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+[2026-05-02T00:00:07.853+0000] {subprocess.py:93} INFO -     compat.raise_(
+[2026-05-02T00:00:07.853+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+[2026-05-02T00:00:07.854+0000] {subprocess.py:93} INFO -     raise exception
+[2026-05-02T00:00:07.854+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+[2026-05-02T00:00:07.855+0000] {subprocess.py:93} INFO -     return self._create_connection()
+[2026-05-02T00:00:07.856+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-02T00:00:07.856+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+[2026-05-02T00:00:07.857+0000] {subprocess.py:93} INFO -     return _ConnectionRecord(self)
+[2026-05-02T00:00:07.857+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-02T00:00:07.858+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+[2026-05-02T00:00:07.858+0000] {subprocess.py:93} INFO -     self.__connect()
+[2026-05-02T00:00:07.859+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 690, in __connect
+[2026-05-02T00:00:07.859+0000] {subprocess.py:93} INFO -     with util.safe_reraise():
+[2026-05-02T00:00:07.860+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+[2026-05-02T00:00:07.860+0000] {subprocess.py:93} INFO -     compat.raise_(
+[2026-05-02T00:00:07.861+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+[2026-05-02T00:00:07.862+0000] {subprocess.py:93} INFO -     raise exception
+[2026-05-02T00:00:07.862+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+[2026-05-02T00:00:07.863+0000] {subprocess.py:93} INFO -     self.dbapi_connection = connection = pool._invoke_creator(self)
+[2026-05-02T00:00:07.863+0000] {subprocess.py:93} INFO -                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-02T00:00:07.864+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+[2026-05-02T00:00:07.865+0000] {subprocess.py:93} INFO -     return dialect.connect(*cargs, **cparams)
+[2026-05-02T00:00:07.865+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-02T00:00:07.866+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+[2026-05-02T00:00:07.866+0000] {subprocess.py:93} INFO -     return self.dbapi.connect(*cargs, **cparams)
+[2026-05-02T00:00:07.867+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-02T00:00:07.867+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/psycopg2/__init__.py", line 122, in connect
+[2026-05-02T00:00:07.868+0000] {subprocess.py:93} INFO -     conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+[2026-05-02T00:00:07.868+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-02T00:00:07.869+0000] {subprocess.py:93} INFO - psycopg2.OperationalError: connection to server at "postgres" (172.20.0.3), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+[2026-05-02T00:00:07.870+0000] {subprocess.py:93} INFO - 
+[2026-05-02T00:00:07.870+0000] {subprocess.py:93} INFO - 
+[2026-05-02T00:00:07.871+0000] {subprocess.py:93} INFO - The above exception was the direct cause of the following exception:
+[2026-05-02T00:00:07.871+0000] {subprocess.py:93} INFO - 
+[2026-05-02T00:00:07.872+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2026-05-02T00:00:07.872+0000] {subprocess.py:93} INFO -   File "/opt/***/ingestion/ingestion.py", line 35, in <module>
+[2026-05-02T00:00:07.873+0000] {subprocess.py:93} INFO -     with engine.begin() as conn:
+[2026-05-02T00:00:07.873+0000] {subprocess.py:93} INFO -          ^^^^^^^^^^^^^^
+[2026-05-02T00:00:07.874+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 3153, in begin
+[2026-05-02T00:00:07.875+0000] {subprocess.py:93} INFO -     conn = self.connect(close_with_result=close_with_result)
+[2026-05-02T00:00:07.876+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-02T00:00:07.876+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 3325, in connect
+[2026-05-02T00:00:07.877+0000] {subprocess.py:93} INFO -     return self._connection_cls(self, close_with_result=close_with_result)
+[2026-05-02T00:00:07.877+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-02T00:00:07.878+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+[2026-05-02T00:00:07.878+0000] {subprocess.py:93} INFO -     else engine.raw_connection()
+[2026-05-02T00:00:07.879+0000] {subprocess.py:93} INFO -          ^^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-02T00:00:07.879+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 3404, in raw_connection
+[2026-05-02T00:00:07.880+0000] {subprocess.py:93} INFO -     return self._wrap_pool_connect(self.pool.connect, _connection)
+[2026-05-02T00:00:07.880+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-02T00:00:07.881+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 3374, in _wrap_pool_connect
+[2026-05-02T00:00:07.881+0000] {subprocess.py:93} INFO -     Connection._handle_dbapi_exception_noconnection(
+[2026-05-02T00:00:07.882+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2208, in _handle_dbapi_exception_noconnection
+[2026-05-02T00:00:07.882+0000] {subprocess.py:93} INFO -     util.raise_(
+[2026-05-02T00:00:07.883+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+[2026-05-02T00:00:07.884+0000] {subprocess.py:93} INFO -     raise exception
+[2026-05-02T00:00:07.884+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 3371, in _wrap_pool_connect
+[2026-05-02T00:00:07.885+0000] {subprocess.py:93} INFO -     return fn()
+[2026-05-02T00:00:07.885+0000] {subprocess.py:93} INFO -            ^^^^
+[2026-05-02T00:00:07.886+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+[2026-05-02T00:00:07.886+0000] {subprocess.py:93} INFO -     return _ConnectionFairy._checkout(self)
+[2026-05-02T00:00:07.887+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-02T00:00:07.887+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+[2026-05-02T00:00:07.888+0000] {subprocess.py:93} INFO -     fairy = _ConnectionRecord.checkout(pool)
+[2026-05-02T00:00:07.888+0000] {subprocess.py:93} INFO -             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-02T00:00:07.889+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+[2026-05-02T00:00:07.889+0000] {subprocess.py:93} INFO -     rec = pool._do_get()
+[2026-05-02T00:00:07.890+0000] {subprocess.py:93} INFO -           ^^^^^^^^^^^^^^
+[2026-05-02T00:00:07.890+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/sqlalchemy/pool/impl.py", line 145, in _do_get
+[2026-05-02T00:00:07.891+0000] {subprocess.py:93} INFO -     with util.safe_reraise():
+[2026-05-02T00:00:07.892+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+[2026-05-02T00:00:07.892+0000] {subprocess.py:93} INFO -     compat.raise_(
+[2026-05-02T00:00:07.893+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+[2026-05-02T00:00:07.893+0000] {subprocess.py:93} INFO -     raise exception
+[2026-05-02T00:00:07.894+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+[2026-05-02T00:00:07.894+0000] {subprocess.py:93} INFO -     return self._create_connection()
+[2026-05-02T00:00:07.895+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-02T00:00:07.895+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+[2026-05-02T00:00:07.896+0000] {subprocess.py:93} INFO -     return _ConnectionRecord(self)
+[2026-05-02T00:00:07.896+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-02T00:00:07.897+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+[2026-05-02T00:00:07.897+0000] {subprocess.py:93} INFO -     self.__connect()
+[2026-05-02T00:00:07.898+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 690, in __connect
+[2026-05-02T00:00:07.898+0000] {subprocess.py:93} INFO -     with util.safe_reraise():
+[2026-05-02T00:00:07.899+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+[2026-05-02T00:00:07.899+0000] {subprocess.py:93} INFO -     compat.raise_(
+[2026-05-02T00:00:07.900+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+[2026-05-02T00:00:07.900+0000] {subprocess.py:93} INFO -     raise exception
+[2026-05-02T00:00:07.901+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+[2026-05-02T00:00:07.901+0000] {subprocess.py:93} INFO -     self.dbapi_connection = connection = pool._invoke_creator(self)
+[2026-05-02T00:00:07.902+0000] {subprocess.py:93} INFO -                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-02T00:00:07.902+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+[2026-05-02T00:00:07.903+0000] {subprocess.py:93} INFO -     return dialect.connect(*cargs, **cparams)
+[2026-05-02T00:00:07.904+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-02T00:00:07.904+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+[2026-05-02T00:00:07.905+0000] {subprocess.py:93} INFO -     return self.dbapi.connect(*cargs, **cparams)
+[2026-05-02T00:00:07.905+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-02T00:00:07.906+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/psycopg2/__init__.py", line 122, in connect
+[2026-05-02T00:00:07.906+0000] {subprocess.py:93} INFO -     conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+[2026-05-02T00:00:07.907+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-02T00:00:07.908+0000] {subprocess.py:93} INFO - sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "postgres" (172.20.0.3), port 5432 failed: FATAL:  password authentication failed for user "postgres"
+[2026-05-02T00:00:07.908+0000] {subprocess.py:93} INFO - 
+[2026-05-02T00:00:07.909+0000] {subprocess.py:93} INFO - (Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2026-05-02T00:00:08.141+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2026-05-02T00:00:08.146+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-05-02T00:00:08.158+0000] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2026-05-02T00:00:08.180+0000] {taskinstance.py:1205} INFO - Marking task as FAILED. dag_id=etl_pipeline, task_id=ingestion, execution_date=20260501T000000, start_date=20260502T000003, end_date=20260502T000008
+[2026-05-02T00:00:08.212+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 100 for task ingestion (Bash command failed. The command returned a non-zero exit code 1.; 38076)
+[2026-05-02T00:00:08.260+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2026-05-02T00:00:08.280+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-05-02T00:00:08.285+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-05-02T05:58:10.994+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-05-02T05:58:11.036+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_pipeline.ingestion scheduled__2026-05-01T00:00:00+00:00 [queued]>
+[2026-05-02T05:58:11.045+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_pipeline.ingestion scheduled__2026-05-01T00:00:00+00:00 [queued]>
+[2026-05-02T05:58:11.045+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 1
+[2026-05-02T05:58:11.059+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): ingestion> on 2026-05-01 00:00:00+00:00
+[2026-05-02T05:58:11.069+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'etl_pipeline', 'ingestion', 'scheduled__2026-05-01T00:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/retail_dag.py', '--cfg-path', '/tmp/tmppdcuxp63']
+[2026-05-02T05:58:11.074+0000] {standard_task_runner.py:91} INFO - Job 4: Subtask ingestion
+[2026-05-02T05:58:11.074+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=2058) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-05-02T05:58:11.075+0000] {standard_task_runner.py:63} INFO - Started process 2062 to run task
+[2026-05-02T05:58:12.350+0000] {task_command.py:426} INFO - Running <TaskInstance: etl_pipeline.ingestion scheduled__2026-05-01T00:00:00+00:00 [running]> on host 58c9d5de5d32
+[2026-05-02T05:58:12.455+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='etl_pipeline' AIRFLOW_CTX_TASK_ID='ingestion' AIRFLOW_CTX_EXECUTION_DATE='2026-05-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-05-01T00:00:00+00:00'
+[2026-05-02T05:58:12.459+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-05-02T05:58:12.460+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-05-02T05:58:12.461+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/airflow/ingestion/ingestion.py']
+[2026-05-02T05:58:12.475+0000] {subprocess.py:86} INFO - Output:
+[2026-05-02T05:58:15.854+0000] {subprocess.py:93} INFO - Loaded rows: 6435
+[2026-05-02T05:58:15.855+0000] {subprocess.py:93} INFO - Saved parquet file
+[2026-05-02T05:58:15.856+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2026-05-02T05:58:15.857+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+[2026-05-02T05:58:15.858+0000] {subprocess.py:93} INFO -     self.dialect.do_execute(
+[2026-05-02T05:58:15.858+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+[2026-05-02T05:58:15.859+0000] {subprocess.py:93} INFO -     cursor.execute(statement, parameters)
+[2026-05-02T05:58:15.860+0000] {subprocess.py:93} INFO - psycopg2.errors.InvalidSchemaName: schema "raw" does not exist
+[2026-05-02T05:58:15.860+0000] {subprocess.py:93} INFO - 
+[2026-05-02T05:58:15.861+0000] {subprocess.py:93} INFO - 
+[2026-05-02T05:58:15.861+0000] {subprocess.py:93} INFO - The above exception was the direct cause of the following exception:
+[2026-05-02T05:58:15.862+0000] {subprocess.py:93} INFO - 
+[2026-05-02T05:58:15.863+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2026-05-02T05:58:15.863+0000] {subprocess.py:93} INFO -   File "/opt/airflow/ingestion/ingestion.py", line 36, in <module>
+[2026-05-02T05:58:15.864+0000] {subprocess.py:93} INFO -     conn.execute(text("TRUNCATE TABLE raw.walmart_sales"))
+[2026-05-02T05:58:15.864+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1385, in execute
+[2026-05-02T05:58:15.865+0000] {subprocess.py:93} INFO -     return meth(self, multiparams, params, _EMPTY_EXECUTION_OPTS)
+[2026-05-02T05:58:15.865+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-02T05:58:15.866+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 334, in _execute_on_connection
+[2026-05-02T05:58:15.867+0000] {subprocess.py:93} INFO -     return connection._execute_clauseelement(
+[2026-05-02T05:58:15.867+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-02T05:58:15.868+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1577, in _execute_clauseelement
+[2026-05-02T05:58:15.869+0000] {subprocess.py:93} INFO -     ret = self._execute_context(
+[2026-05-02T05:58:15.869+0000] {subprocess.py:93} INFO -           ^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-02T05:58:15.870+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1953, in _execute_context
+[2026-05-02T05:58:15.871+0000] {subprocess.py:93} INFO -     self._handle_dbapi_exception(
+[2026-05-02T05:58:15.871+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2134, in _handle_dbapi_exception
+[2026-05-02T05:58:15.872+0000] {subprocess.py:93} INFO -     util.raise_(
+[2026-05-02T05:58:15.873+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+[2026-05-02T05:58:15.874+0000] {subprocess.py:93} INFO -     raise exception
+[2026-05-02T05:58:15.876+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+[2026-05-02T05:58:15.877+0000] {subprocess.py:93} INFO -     self.dialect.do_execute(
+[2026-05-02T05:58:15.878+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+[2026-05-02T05:58:15.879+0000] {subprocess.py:93} INFO -     cursor.execute(statement, parameters)
+[2026-05-02T05:58:15.879+0000] {subprocess.py:93} INFO - sqlalchemy.exc.ProgrammingError: (psycopg2.errors.InvalidSchemaName) schema "raw" does not exist
+[2026-05-02T05:58:15.881+0000] {subprocess.py:93} INFO - 
+[2026-05-02T05:58:15.882+0000] {subprocess.py:93} INFO - [SQL: TRUNCATE TABLE raw.walmart_sales]
+[2026-05-02T05:58:15.882+0000] {subprocess.py:93} INFO - (Background on this error at: https://sqlalche.me/e/14/f405)
+[2026-05-02T05:58:16.561+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2026-05-02T05:58:16.562+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-05-02T05:58:16.574+0000] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2026-05-02T05:58:16.580+0000] {taskinstance.py:1205} INFO - Marking task as FAILED. dag_id=etl_pipeline, task_id=ingestion, execution_date=20260501T000000, start_date=20260502T055811, end_date=20260502T055816
+[2026-05-02T05:58:16.627+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 4 for task ingestion (Bash command failed. The command returned a non-zero exit code 1.; 2062)
+[2026-05-02T05:58:16.654+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2026-05-02T05:58:16.676+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-05-02T05:58:16.681+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-05-02T06:37:05.614+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-05-02T06:37:05.769+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_pipeline.ingestion scheduled__2026-05-01T00:00:00+00:00 [queued]>
+[2026-05-02T06:37:05.792+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_pipeline.ingestion scheduled__2026-05-01T00:00:00+00:00 [queued]>
+[2026-05-02T06:37:05.794+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 1
+[2026-05-02T06:37:05.857+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): ingestion> on 2026-05-01 00:00:00+00:00
+[2026-05-02T06:37:05.909+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'etl_pipeline', 'ingestion', 'scheduled__2026-05-01T00:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/retail_dag.py', '--cfg-path', '/tmp/tmp5mq_kpwf']
+[2026-05-02T06:37:05.913+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=3658) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-05-02T06:37:05.920+0000] {standard_task_runner.py:91} INFO - Job 4: Subtask ingestion
+[2026-05-02T06:37:05.924+0000] {standard_task_runner.py:63} INFO - Started process 3716 to run task
+[2026-05-02T06:37:09.737+0000] {task_command.py:426} INFO - Running <TaskInstance: etl_pipeline.ingestion scheduled__2026-05-01T00:00:00+00:00 [running]> on host 8c7ac035979f
+[2026-05-02T06:37:09.827+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='etl_pipeline' AIRFLOW_CTX_TASK_ID='ingestion' AIRFLOW_CTX_EXECUTION_DATE='2026-05-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-05-01T00:00:00+00:00'
+[2026-05-02T06:37:09.829+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-05-02T06:37:09.830+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-05-02T06:37:09.872+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/airflow/ingestion/ingestion.py']
+[2026-05-02T06:37:09.885+0000] {subprocess.py:86} INFO - Output:
+[2026-05-02T06:37:11.436+0000] {subprocess.py:93} INFO - Loaded rows: 6435
+[2026-05-02T06:37:11.437+0000] {subprocess.py:93} INFO - Saved parquet file
+[2026-05-02T06:37:11.438+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2026-05-02T06:37:11.438+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+[2026-05-02T06:37:11.439+0000] {subprocess.py:93} INFO -     self.dialect.do_execute(
+[2026-05-02T06:37:11.440+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+[2026-05-02T06:37:11.440+0000] {subprocess.py:93} INFO -     cursor.execute(statement, parameters)
+[2026-05-02T06:37:11.441+0000] {subprocess.py:93} INFO - psycopg2.errors.InvalidSchemaName: schema "raw" does not exist
+[2026-05-02T06:37:11.441+0000] {subprocess.py:93} INFO - 
+[2026-05-02T06:37:11.442+0000] {subprocess.py:93} INFO - 
+[2026-05-02T06:37:11.443+0000] {subprocess.py:93} INFO - The above exception was the direct cause of the following exception:
+[2026-05-02T06:37:11.443+0000] {subprocess.py:93} INFO - 
+[2026-05-02T06:37:11.444+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2026-05-02T06:37:11.444+0000] {subprocess.py:93} INFO -   File "/opt/airflow/ingestion/ingestion.py", line 36, in <module>
+[2026-05-02T06:37:11.445+0000] {subprocess.py:93} INFO -     conn.execute(text("TRUNCATE TABLE raw.walmart_sales"))
+[2026-05-02T06:37:11.446+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1385, in execute
+[2026-05-02T06:37:11.446+0000] {subprocess.py:93} INFO -     return meth(self, multiparams, params, _EMPTY_EXECUTION_OPTS)
+[2026-05-02T06:37:11.447+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-02T06:37:11.447+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 334, in _execute_on_connection
+[2026-05-02T06:37:11.448+0000] {subprocess.py:93} INFO -     return connection._execute_clauseelement(
+[2026-05-02T06:37:11.449+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-02T06:37:11.450+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1577, in _execute_clauseelement
+[2026-05-02T06:37:11.451+0000] {subprocess.py:93} INFO -     ret = self._execute_context(
+[2026-05-02T06:37:11.452+0000] {subprocess.py:93} INFO -           ^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-02T06:37:11.453+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1953, in _execute_context
+[2026-05-02T06:37:11.454+0000] {subprocess.py:93} INFO -     self._handle_dbapi_exception(
+[2026-05-02T06:37:11.455+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2134, in _handle_dbapi_exception
+[2026-05-02T06:37:11.456+0000] {subprocess.py:93} INFO -     util.raise_(
+[2026-05-02T06:37:11.456+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+[2026-05-02T06:37:11.457+0000] {subprocess.py:93} INFO -     raise exception
+[2026-05-02T06:37:11.458+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+[2026-05-02T06:37:11.459+0000] {subprocess.py:93} INFO -     self.dialect.do_execute(
+[2026-05-02T06:37:11.459+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+[2026-05-02T06:37:11.460+0000] {subprocess.py:93} INFO -     cursor.execute(statement, parameters)
+[2026-05-02T06:37:11.461+0000] {subprocess.py:93} INFO - sqlalchemy.exc.ProgrammingError: (psycopg2.errors.InvalidSchemaName) schema "raw" does not exist
+[2026-05-02T06:37:11.461+0000] {subprocess.py:93} INFO - 
+[2026-05-02T06:37:11.462+0000] {subprocess.py:93} INFO - [SQL: TRUNCATE TABLE raw.walmart_sales]
+[2026-05-02T06:37:11.462+0000] {subprocess.py:93} INFO - (Background on this error at: https://sqlalche.me/e/14/f405)
+[2026-05-02T06:37:11.898+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2026-05-02T06:37:11.899+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-05-02T06:37:11.911+0000] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2026-05-02T06:37:11.930+0000] {taskinstance.py:1205} INFO - Marking task as FAILED. dag_id=etl_pipeline, task_id=ingestion, execution_date=20260501T000000, start_date=20260502T063705, end_date=20260502T063711
+[2026-05-02T06:37:11.960+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 4 for task ingestion (Bash command failed. The command returned a non-zero exit code 1.; 3716)
+[2026-05-02T06:37:12.006+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2026-05-02T06:37:12.031+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-05-02T06:37:12.038+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-05-02T09:30:02.184+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-05-02T09:30:02.390+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_pipeline.ingestion scheduled__2026-05-01T00:00:00+00:00 [queued]>
+[2026-05-02T09:30:02.444+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_pipeline.ingestion scheduled__2026-05-01T00:00:00+00:00 [queued]>
+[2026-05-02T09:30:02.445+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 1
+[2026-05-02T09:30:02.481+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): ingestion> on 2026-05-01 00:00:00+00:00
+[2026-05-02T09:30:02.506+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'etl_pipeline', 'ingestion', 'scheduled__2026-05-01T00:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/retail_dag.py', '--cfg-path', '/tmp/tmphyjij9lo']
+[2026-05-02T09:30:02.516+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=722) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-05-02T09:30:02.516+0000] {standard_task_runner.py:91} INFO - Job 4: Subtask ingestion
+[2026-05-02T09:30:02.517+0000] {standard_task_runner.py:63} INFO - Started process 738 to run task
+[2026-05-02T09:30:03.053+0000] {task_command.py:426} INFO - Running <TaskInstance: etl_pipeline.ingestion scheduled__2026-05-01T00:00:00+00:00 [running]> on host b5207b5e7597
+[2026-05-02T09:30:04.136+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='etl_pipeline' AIRFLOW_CTX_TASK_ID='ingestion' AIRFLOW_CTX_EXECUTION_DATE='2026-05-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-05-01T00:00:00+00:00'
+[2026-05-02T09:30:04.145+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-05-02T09:30:04.148+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-05-02T09:30:04.152+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/airflow/ingestion/ingestion.py']
+[2026-05-02T09:30:04.189+0000] {subprocess.py:86} INFO - Output:
+[2026-05-02T09:30:09.885+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2026-05-02T09:30:09.886+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+[2026-05-02T09:30:09.887+0000] {subprocess.py:93} INFO -     self.dialect.do_execute(
+[2026-05-02T09:30:09.888+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+[2026-05-02T09:30:09.889+0000] {subprocess.py:93} INFO -     cursor.execute(statement, parameters)
+[2026-05-02T09:30:09.891+0000] {subprocess.py:93} INFO - psycopg2.errors.UniqueViolation: duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+[2026-05-02T09:30:09.892+0000] {subprocess.py:93} INFO - DETAIL:  Key (typname, typnamespace)=(walmart_sales, ***037) already exists.
+[2026-05-02T09:30:09.894+0000] {subprocess.py:93} INFO - 
+[2026-05-02T09:30:09.894+0000] {subprocess.py:93} INFO - 
+[2026-05-02T09:30:09.895+0000] {subprocess.py:93} INFO - The above exception was the direct cause of the following exception:
+[2026-05-02T09:30:09.895+0000] {subprocess.py:93} INFO - 
+[2026-05-02T09:30:09.896+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2026-05-02T09:30:09.897+0000] {subprocess.py:93} INFO -   File "/opt/airflow/ingestion/ingestion.py", line 15, in <module>
+[2026-05-02T09:30:09.897+0000] {subprocess.py:93} INFO -     df.to_sql(
+[2026-05-02T09:30:09.898+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/pandas/util/_decorators.py", line 333, in wrapper
+[2026-05-02T09:30:09.899+0000] {subprocess.py:93} INFO -     return func(*args, **kwargs)
+[2026-05-02T09:30:09.899+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^
+[2026-05-02T09:30:09.900+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/pandas/core/generic.py", line 3008, in to_sql
+[2026-05-02T09:30:09.901+0000] {subprocess.py:93} INFO -     return sql.to_sql(
+[2026-05-02T09:30:09.901+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^
+[2026-05-02T09:30:09.902+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 788, in to_sql
+[2026-05-02T09:30:09.903+0000] {subprocess.py:93} INFO -     return pandas_sql.to_sql(
+[2026-05-02T09:30:09.903+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^
+[2026-05-02T09:30:09.904+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 1948, in to_sql
+[2026-05-02T09:30:09.905+0000] {subprocess.py:93} INFO -     table = self.prep_table(
+[2026-05-02T09:30:09.906+0000] {subprocess.py:93} INFO -             ^^^^^^^^^^^^^^^^
+[2026-05-02T09:30:09.907+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 1852, in prep_table
+[2026-05-02T09:30:09.909+0000] {subprocess.py:93} INFO -     table.create()
+[2026-05-02T09:30:09.911+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 936, in create
+[2026-05-02T09:30:09.912+0000] {subprocess.py:93} INFO -     self._execute_create()
+[2026-05-02T09:30:09.913+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/pandas/io/sql.py", line 922, in _execute_create
+[2026-05-02T09:30:09.914+0000] {subprocess.py:93} INFO -     self.table.create(bind=self.pd_sql.con)
+[2026-05-02T09:30:09.915+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/sql/schema.py", line 962, in create
+[2026-05-02T09:30:09.916+0000] {subprocess.py:93} INFO -     bind._run_ddl_visitor(ddl.SchemaGenerator, self, checkfirst=checkfirst)
+[2026-05-02T09:30:09.916+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2221, in _run_ddl_visitor
+[2026-05-02T09:30:09.917+0000] {subprocess.py:93} INFO -     visitorcallable(self.dialect, self, **kwargs).traverse_single(element)
+[2026-05-02T09:30:09.917+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/sql/visitors.py", line 524, in traverse_single
+[2026-05-02T09:30:09.917+0000] {subprocess.py:93} INFO -     return meth(obj, **kw)
+[2026-05-02T09:30:09.918+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^
+[2026-05-02T09:30:09.918+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/sql/ddl.py", line 899, in visit_table
+[2026-05-02T09:30:09.919+0000] {subprocess.py:93} INFO -     self.connection.execute(
+[2026-05-02T09:30:09.919+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1385, in execute
+[2026-05-02T09:30:09.920+0000] {subprocess.py:93} INFO -     return meth(self, multiparams, params, _EMPTY_EXECUTION_OPTS)
+[2026-05-02T09:30:09.920+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-02T09:30:09.920+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/sql/ddl.py", line 80, in _execute_on_connection
+[2026-05-02T09:30:09.921+0000] {subprocess.py:93} INFO -     return connection._execute_ddl(
+[2026-05-02T09:30:09.921+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-02T09:30:09.922+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1477, in _execute_ddl
+[2026-05-02T09:30:09.922+0000] {subprocess.py:93} INFO -     ret = self._execute_context(
+[2026-05-02T09:30:09.923+0000] {subprocess.py:93} INFO -           ^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-02T09:30:09.923+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1953, in _execute_context
+[2026-05-02T09:30:09.924+0000] {subprocess.py:93} INFO -     self._handle_dbapi_exception(
+[2026-05-02T09:30:09.925+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2134, in _handle_dbapi_exception
+[2026-05-02T09:30:09.926+0000] {subprocess.py:93} INFO -     util.raise_(
+[2026-05-02T09:30:09.926+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+[2026-05-02T09:30:09.927+0000] {subprocess.py:93} INFO -     raise exception
+[2026-05-02T09:30:09.927+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1910, in _execute_context
+[2026-05-02T09:30:09.928+0000] {subprocess.py:93} INFO -     self.dialect.do_execute(
+[2026-05-02T09:30:09.929+0000] {subprocess.py:93} INFO -   File "/home/airflow/.local/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+[2026-05-02T09:30:09.929+0000] {subprocess.py:93} INFO -     cursor.execute(statement, parameters)
+[2026-05-02T09:30:09.930+0000] {subprocess.py:93} INFO - sqlalchemy.exc.IntegrityError: (psycopg2.errors.UniqueViolation) duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+[2026-05-02T09:30:09.930+0000] {subprocess.py:93} INFO - DETAIL:  Key (typname, typnamespace)=(walmart_sales, ***037) already exists.
+[2026-05-02T09:30:09.931+0000] {subprocess.py:93} INFO - 
+[2026-05-02T09:30:09.931+0000] {subprocess.py:93} INFO - [SQL:
+[2026-05-02T09:30:09.932+0000] {subprocess.py:93} INFO - CREATE TABLE walmart_sales (
+[2026-05-02T09:30:09.932+0000] {subprocess.py:93} INFO - 	store BIGINT,
+[2026-05-02T09:30:09.933+0000] {subprocess.py:93} INFO - 	date TEXT,
+[2026-05-02T09:30:09.933+0000] {subprocess.py:93} INFO - 	weekly_sales FLOAT(53),
+[2026-05-02T09:30:09.934+0000] {subprocess.py:93} INFO - 	holiday_flag BIGINT,
+[2026-05-02T09:30:09.934+0000] {subprocess.py:93} INFO - 	temperature FLOAT(53),
+[2026-05-02T09:30:09.935+0000] {subprocess.py:93} INFO - 	fuel_price FLOAT(53),
+[2026-05-02T09:30:09.935+0000] {subprocess.py:93} INFO - 	cpi FLOAT(53),
+[2026-05-02T09:30:09.936+0000] {subprocess.py:93} INFO - 	unemployment FLOAT(53)
+[2026-05-02T09:30:09.936+0000] {subprocess.py:93} INFO - )
+[2026-05-02T09:30:09.937+0000] {subprocess.py:93} INFO - 
+[2026-05-02T09:30:09.937+0000] {subprocess.py:93} INFO - ]
+[2026-05-02T09:30:09.938+0000] {subprocess.py:93} INFO - (Background on this error at: https://sqlalche.me/e/14/gkpj)
+[2026-05-02T09:30:10.070+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2026-05-02T09:30:10.071+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-05-02T09:30:10.163+0000] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2026-05-02T09:30:10.182+0000] {taskinstance.py:1205} INFO - Marking task as FAILED. dag_id=etl_pipeline, task_id=ingestion, execution_date=20260501T000000, start_date=20260502T093002, end_date=20260502T093010
+[2026-05-02T09:30:10.244+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 4 for task ingestion (Bash command failed. The command returned a non-zero exit code 1.; 738)
+[2026-05-02T09:30:10.275+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2026-05-02T09:30:10.490+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-05-02T09:30:10.498+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

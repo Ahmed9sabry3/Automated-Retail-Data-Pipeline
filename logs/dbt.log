@@ -1,0 +1,89 @@
+[0m20:44:30.953387 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000266E7EA5930>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000266E91101F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000266E6CA04F0>]}
+
+
+============================== 20:44:31.104617 | 00ee9aaf-2f22-47bc-9b33-bff6813b2d3e ==============================
+[0m20:44:31.104617 [info ] [MainThread]: Running with dbt=1.11.8
+[0m20:44:31.107263 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Hamada\\.dbt', 'use_colors': 'True', 'invocation_command': 'dbt init dbt_project', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m20:44:31.299853 [debug] [MainThread]: Starter project path: D:\Fatma\DEPI\Final_project\project\dbt-env\lib\site-packages\dbt\include\starter_project
+[0m20:44:32.237238 [info ] [MainThread]: 
+Your new dbt project "dbt_project" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m20:44:32.237238 [info ] [MainThread]: Setting up your profile.
+[0m20:52:04.221849 [info ] [MainThread]: Profile dbt_project written to C:\Users\Hamada\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m20:52:04.221849 [debug] [MainThread]: Command `dbt init` succeeded at 20:52:04.221849 after 453.47 seconds
+[0m20:52:04.221849 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000266E7EA5930>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000266E90A3B80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000266E88CC160>]}
+[0m20:52:04.221849 [debug] [MainThread]: Flushing usage events
+[0m20:52:05.624138 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:29:58.844751 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024B24375900>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024B255E41F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024B2462BF40>]}
+
+
+============================== 12:29:58.933570 | 80bbb7e2-7670-462a-931b-039b664056d5 ==============================
+[0m12:29:58.933570 [info ] [MainThread]: Running with dbt=1.11.8
+[0m12:29:58.935533 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Hamada\\.dbt', 'invocation_command': 'dbt clean', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m12:29:59.823837 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path D:\Fatma\DEPI\Final_project\project\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m12:29:59.825340 [debug] [MainThread]: Command `dbt clean` failed at 12:29:59.825340 after 1.36 seconds
+[0m12:29:59.826349 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024B24375900>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024B2563D2A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024B2563D1B0>]}
+[0m12:29:59.826349 [debug] [MainThread]: Flushing usage events
+[0m12:30:00.558748 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:30:08.090289 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002139AD25960>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002139C0416F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002139C041510>]}
+
+
+============================== 12:30:08.094881 | 3b51f70a-010f-48ed-a789-eab1524d76ac ==============================
+[0m12:30:08.094881 [info ] [MainThread]: Running with dbt=1.11.8
+[0m12:30:08.095387 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Hamada\\.dbt', 'invocation_command': 'dbt run', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m12:30:08.096394 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path D:\Fatma\DEPI\Final_project\project\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m12:30:08.097401 [debug] [MainThread]: Command `dbt run` failed at 12:30:08.097401 after 0.11 seconds
+[0m12:30:08.098402 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002139AD25960>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002139C0417E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002139C0417B0>]}
+[0m12:30:08.099400 [debug] [MainThread]: Flushing usage events
+[0m12:30:08.728413 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:30:18.455687 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029899C698D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002989AF7A2C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002989AF788E0>]}
+
+
+============================== 12:30:18.460144 | 93149b2d-703a-4e5c-993a-c6d6f5c83036 ==============================
+[0m12:30:18.460144 [info ] [MainThread]: Running with dbt=1.11.8
+[0m12:30:18.461115 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Hamada\\.dbt', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt docs generate', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m12:30:18.462139 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path D:\Fatma\DEPI\Final_project\project\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m12:30:18.463114 [debug] [MainThread]: Command `dbt docs generate` failed at 12:30:18.463114 after 0.11 seconds
+[0m12:30:18.463114 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029899C698D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002989AF78880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002989AF788E0>]}
+[0m12:30:18.464647 [debug] [MainThread]: Flushing usage events
+[0m12:30:19.109978 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m12:30:34.331745 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002911EC55930>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002911FE63D30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002911FE634F0>]}
+
+
+============================== 12:30:34.336216 | 7a763466-692b-400f-964c-cb577b968127 ==============================
+[0m12:30:34.336216 [info ] [MainThread]: Running with dbt=1.11.8
+[0m12:30:34.337733 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Hamada\\.dbt', 'use_colors': 'True', 'invocation_command': 'dbt docs serve --port 8060', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m12:30:34.338742 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path D:\Fatma\DEPI\Final_project\project\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m12:30:34.339752 [debug] [MainThread]: Command `dbt docs serve` failed at 12:30:34.339752 after 0.13 seconds
+[0m12:30:34.340759 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002911EC55930>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002911FE637F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002911FE638B0>]}
+[0m12:30:34.341744 [debug] [MainThread]: Flushing usage events
+[0m12:30:34.948331 [debug] [MainThread]: An error was encountered while trying to flush usage events

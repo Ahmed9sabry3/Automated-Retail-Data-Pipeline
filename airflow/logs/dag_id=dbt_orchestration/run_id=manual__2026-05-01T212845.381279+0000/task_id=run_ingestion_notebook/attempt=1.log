@@ -1,0 +1,123 @@
+[2026-05-01T21:28:49.347+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-05-01T21:28:49.378+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dbt_orchestration.run_ingestion_notebook manual__2026-05-01T21:28:45.381279+00:00 [queued]>
+[2026-05-01T21:28:49.385+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dbt_orchestration.run_ingestion_notebook manual__2026-05-01T21:28:45.381279+00:00 [queued]>
+[2026-05-01T21:28:49.386+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 1
+[2026-05-01T21:28:49.501+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): run_ingestion_notebook> on 2026-05-01 21:28:45.381279+00:00
+[2026-05-01T21:28:49.521+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=1789) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-05-01T21:28:49.518+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'dbt_orchestration', 'run_ingestion_notebook', 'manual__2026-05-01T21:28:45.381279+00:00', '--job-id', '44', '--raw', '--subdir', 'DAGS_FOLDER/retail_dag.py', '--cfg-path', '/tmp/tmp21opqup8']
+[2026-05-01T21:28:49.524+0000] {standard_task_runner.py:63} INFO - Started process 1791 to run task
+[2026-05-01T21:28:49.525+0000] {standard_task_runner.py:91} INFO - Job 44: Subtask run_ingestion_notebook
+[2026-05-01T21:28:50.556+0000] {task_command.py:426} INFO - Running <TaskInstance: dbt_orchestration.run_ingestion_notebook manual__2026-05-01T21:28:45.381279+00:00 [running]> on host 2b13964bedc2
+[2026-05-01T21:28:50.640+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dbt_orchestration' AIRFLOW_CTX_TASK_ID='run_ingestion_notebook' AIRFLOW_CTX_EXECUTION_DATE='2026-05-01T21:28:45.381279+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-01T21:28:45.381279+00:00'
+[2026-05-01T21:28:50.642+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-05-01T21:28:50.643+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-05-01T21:28:50.645+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', '\n        papermill /opt/***/ingestion/ingestion.ipynb                   /opt/***/ingestion/output.ipynb\n        ']
+[2026-05-01T21:28:50.657+0000] {subprocess.py:86} INFO - Output:
+[2026-05-01T21:28:53.293+0000] {subprocess.py:93} INFO - Input Notebook:  /opt/***/ingestion/ingestion.ipynb
+[2026-05-01T21:28:53.294+0000] {subprocess.py:93} INFO - Output Notebook: /opt/***/ingestion/output.ipynb
+[2026-05-01T21:28:53.852+0000] {subprocess.py:93} INFO - Executing:   0%|          | 0/8 [00:00<?, ?cell/s]No such kernel named python3
+[2026-05-01T21:28:53.853+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2026-05-01T21:28:53.854+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/jupyter_client/manager.py", line 88, in wrapper
+[2026-05-01T21:28:53.855+0000] {subprocess.py:93} INFO -     out = await method(self, *args, **kwargs)
+[2026-05-01T21:28:53.856+0000] {subprocess.py:93} INFO -           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-01T21:28:53.856+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/jupyter_client/manager.py", line 441, in _async_start_kernel
+[2026-05-01T21:28:53.857+0000] {subprocess.py:93} INFO -     kernel_cmd, kw = await self._async_pre_start_kernel(**kw)
+[2026-05-01T21:28:53.858+0000] {subprocess.py:93} INFO -                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-01T21:28:53.859+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/jupyter_client/manager.py", line 403, in _async_pre_start_kernel
+[2026-05-01T21:28:53.859+0000] {subprocess.py:93} INFO -     self.kernel_spec,
+[2026-05-01T21:28:53.860+0000] {subprocess.py:93} INFO -     ^^^^^^^^^^^^^^^^
+[2026-05-01T21:28:53.861+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/jupyter_client/manager.py", line 196, in kernel_spec
+[2026-05-01T21:28:53.861+0000] {subprocess.py:93} INFO -     self._kernel_spec = self.kernel_spec_manager.get_kernel_spec(self.kernel_name)
+[2026-05-01T21:28:53.862+0000] {subprocess.py:93} INFO -                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-01T21:28:53.863+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/jupyter_client/kernelspec.py", line 287, in get_kernel_spec
+[2026-05-01T21:28:53.864+0000] {subprocess.py:93} INFO -     raise NoSuchKernel(kernel_name)
+[2026-05-01T21:28:53.864+0000] {subprocess.py:93} INFO - jupyter_client.kernelspec.NoSuchKernel: No such kernel named python3
+[2026-05-01T21:28:53.865+0000] {subprocess.py:93} INFO - Executing:   0%|          | 0/8 [00:00<?, ?cell/s]
+[2026-05-01T21:28:53.865+0000] {subprocess.py:93} INFO - Traceback (most recent call last):
+[2026-05-01T21:28:53.866+0000] {subprocess.py:93} INFO -   File "/home/***/.local/bin/papermill", line 8, in <module>
+[2026-05-01T21:28:53.867+0000] {subprocess.py:93} INFO -     sys.exit(papermill())
+[2026-05-01T21:28:53.868+0000] {subprocess.py:93} INFO -              ^^^^^^^^^^^
+[2026-05-01T21:28:53.868+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/click/core.py", line 1157, in __call__
+[2026-05-01T21:28:53.869+0000] {subprocess.py:93} INFO -     return self.main(*args, **kwargs)
+[2026-05-01T21:28:53.869+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-01T21:28:53.870+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/click/core.py", line 1078, in main
+[2026-05-01T21:28:53.870+0000] {subprocess.py:93} INFO -     rv = self.invoke(ctx)
+[2026-05-01T21:28:53.871+0000] {subprocess.py:93} INFO -          ^^^^^^^^^^^^^^^^
+[2026-05-01T21:28:53.872+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/click/core.py", line 1434, in invoke
+[2026-05-01T21:28:53.872+0000] {subprocess.py:93} INFO -     return ctx.invoke(self.callback, **ctx.params)
+[2026-05-01T21:28:53.873+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-01T21:28:53.873+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/click/core.py", line 783, in invoke
+[2026-05-01T21:28:53.874+0000] {subprocess.py:93} INFO -     return __callback(*args, **kwargs)
+[2026-05-01T21:28:53.875+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-01T21:28:53.876+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/click/decorators.py", line 33, in new_func
+[2026-05-01T21:28:53.876+0000] {subprocess.py:93} INFO -     return f(get_current_context(), *args, **kwargs)
+[2026-05-01T21:28:53.877+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-01T21:28:53.878+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/papermill/cli.py", line 235, in papermill
+[2026-05-01T21:28:53.878+0000] {subprocess.py:93} INFO -     execute_notebook(
+[2026-05-01T21:28:53.879+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/papermill/execute.py", line 116, in execute_notebook
+[2026-05-01T21:28:53.880+0000] {subprocess.py:93} INFO -     nb = papermill_engines.execute_notebook_with_engine(
+[2026-05-01T21:28:53.880+0000] {subprocess.py:93} INFO -          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-01T21:28:53.881+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/papermill/engines.py", line 49, in execute_notebook_with_engine
+[2026-05-01T21:28:53.882+0000] {subprocess.py:93} INFO -     return self.get_engine(engine_name).execute_notebook(nb, kernel_name, **kwargs)
+[2026-05-01T21:28:53.882+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-01T21:28:53.883+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/papermill/engines.py", line 371, in execute_notebook
+[2026-05-01T21:28:53.883+0000] {subprocess.py:93} INFO -     cls.execute_managed_notebook(nb_man, kernel_name, log_output=log_output, **kwargs)
+[2026-05-01T21:28:53.884+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/papermill/engines.py", line 443, in execute_managed_notebook
+[2026-05-01T21:28:53.885+0000] {subprocess.py:93} INFO -     return PapermillNotebookClient(nb_man, **final_kwargs).execute()
+[2026-05-01T21:28:53.885+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-01T21:28:53.886+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/papermill/clientwrap.py", line 43, in execute
+[2026-05-01T21:28:53.886+0000] {subprocess.py:93} INFO -     with self.setup_kernel(**kwargs):
+[2026-05-01T21:28:53.887+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.12/contextlib.py", line 137, in __enter__
+[2026-05-01T21:28:53.888+0000] {subprocess.py:93} INFO -     return next(self.gen)
+[2026-05-01T21:28:53.888+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^
+[2026-05-01T21:28:53.889+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/nbclient/client.py", line 600, in setup_kernel
+[2026-05-01T21:28:53.889+0000] {subprocess.py:93} INFO -     self.start_new_kernel(**kwargs)
+[2026-05-01T21:28:53.890+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+[2026-05-01T21:28:53.891+0000] {subprocess.py:93} INFO -     return loop.run_until_complete(inner)
+[2026-05-01T21:28:53.891+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-01T21:28:53.892+0000] {subprocess.py:93} INFO -   File "/usr/local/lib/python3.12/asyncio/base_events.py", line 685, in run_until_complete
+[2026-05-01T21:28:53.893+0000] {subprocess.py:93} INFO -     return future.result()
+[2026-05-01T21:28:53.893+0000] {subprocess.py:93} INFO -            ^^^^^^^^^^^^^^^
+[2026-05-01T21:28:53.894+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/nbclient/client.py", line 550, in async_start_new_kernel
+[2026-05-01T21:28:53.894+0000] {subprocess.py:93} INFO -     await ensure_async(self.km.start_kernel(extra_arguments=self.extra_arguments, **kwargs))
+[2026-05-01T21:28:53.895+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/jupyter_core/utils/__init__.py", line 214, in ensure_async
+[2026-05-01T21:28:53.895+0000] {subprocess.py:93} INFO -     result = await obj
+[2026-05-01T21:28:53.896+0000] {subprocess.py:93} INFO -              ^^^^^^^^^
+[2026-05-01T21:28:53.897+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/jupyter_client/manager.py", line 97, in wrapper
+[2026-05-01T21:28:53.897+0000] {subprocess.py:93} INFO -     raise e
+[2026-05-01T21:28:53.898+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/jupyter_client/manager.py", line 88, in wrapper
+[2026-05-01T21:28:53.898+0000] {subprocess.py:93} INFO -     out = await method(self, *args, **kwargs)
+[2026-05-01T21:28:53.899+0000] {subprocess.py:93} INFO -           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-01T21:28:53.899+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/jupyter_client/manager.py", line 441, in _async_start_kernel
+[2026-05-01T21:28:53.900+0000] {subprocess.py:93} INFO -     kernel_cmd, kw = await self._async_pre_start_kernel(**kw)
+[2026-05-01T21:28:53.900+0000] {subprocess.py:93} INFO -                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-01T21:28:53.901+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/jupyter_client/manager.py", line 403, in _async_pre_start_kernel
+[2026-05-01T21:28:53.901+0000] {subprocess.py:93} INFO -     self.kernel_spec,
+[2026-05-01T21:28:53.902+0000] {subprocess.py:93} INFO -     ^^^^^^^^^^^^^^^^
+[2026-05-01T21:28:53.902+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/jupyter_client/manager.py", line 196, in kernel_spec
+[2026-05-01T21:28:53.903+0000] {subprocess.py:93} INFO -     self._kernel_spec = self.kernel_spec_manager.get_kernel_spec(self.kernel_name)
+[2026-05-01T21:28:53.903+0000] {subprocess.py:93} INFO -                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2026-05-01T21:28:53.904+0000] {subprocess.py:93} INFO -   File "/home/***/.local/lib/python3.12/site-packages/jupyter_client/kernelspec.py", line 287, in get_kernel_spec
+[2026-05-01T21:28:53.904+0000] {subprocess.py:93} INFO -     raise NoSuchKernel(kernel_name)
+[2026-05-01T21:28:53.905+0000] {subprocess.py:93} INFO - jupyter_client.kernelspec.NoSuchKernel: No such kernel named python3
+[2026-05-01T21:28:54.035+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2026-05-01T21:28:54.036+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-05-01T21:28:54.047+0000] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2026-05-01T21:28:54.051+0000] {taskinstance.py:1205} INFO - Marking task as FAILED. dag_id=dbt_orchestration, task_id=run_ingestion_notebook, execution_date=20260501T212845, start_date=20260501T212849, end_date=20260501T212854
+[2026-05-01T21:28:54.064+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 44 for task run_ingestion_notebook (Bash command failed. The command returned a non-zero exit code 1.; 1791)
+[2026-05-01T21:28:54.080+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2026-05-01T21:28:54.100+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-05-01T21:28:54.104+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

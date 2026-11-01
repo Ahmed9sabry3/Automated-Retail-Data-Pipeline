@@ -1,0 +1,12 @@
+dbt-core==1.7.14
+dbt-postgres==1.7.14
+
+apache-airflow-providers-postgres>=5.0.0
+
+papermill
+nbformat
+jupyter
+ipykernel
+
+psycopg2-binary
+sqlparse

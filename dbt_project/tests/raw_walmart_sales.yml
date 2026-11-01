@@ -1,0 +1,8 @@
+version: 2
+
+models:
+  - name: raw_walmart_sales
+    columns:
+      - name: Weekly_Sales
+        tests:
+          - not_null

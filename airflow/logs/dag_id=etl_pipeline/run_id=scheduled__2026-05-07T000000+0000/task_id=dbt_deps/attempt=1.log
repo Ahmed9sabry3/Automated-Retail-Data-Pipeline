@@ -1,0 +1,24 @@
+[2026-05-08T19:47:46.966+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-05-08T19:47:47.047+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_pipeline.dbt_deps scheduled__2026-05-07T00:00:00+00:00 [queued]>
+[2026-05-08T19:47:47.062+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_pipeline.dbt_deps scheduled__2026-05-07T00:00:00+00:00 [queued]>
+[2026-05-08T19:47:47.063+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 1
+[2026-05-08T19:47:47.080+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): dbt_deps> on 2026-05-07 00:00:00+00:00
+[2026-05-08T19:47:47.091+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'etl_pipeline', 'dbt_deps', 'scheduled__2026-05-07T00:00:00+00:00', '--job-id', '18', '--raw', '--subdir', 'DAGS_FOLDER/retail_dag.py', '--cfg-path', '/tmp/tmpxeu_59im']
+[2026-05-08T19:47:47.094+0000] {standard_task_runner.py:91} INFO - Job 18: Subtask dbt_deps
+[2026-05-08T19:47:47.094+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=461) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-05-08T19:47:47.096+0000] {standard_task_runner.py:63} INFO - Started process 496 to run task
+[2026-05-08T19:47:47.450+0000] {task_command.py:426} INFO - Running <TaskInstance: etl_pipeline.dbt_deps scheduled__2026-05-07T00:00:00+00:00 [running]> on host 55294df33dd8
+[2026-05-08T19:47:48.044+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='etl_pipeline' AIRFLOW_CTX_TASK_ID='dbt_deps' AIRFLOW_CTX_EXECUTION_DATE='2026-05-07T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-05-07T00:00:00+00:00'
+[2026-05-08T19:47:48.046+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-05-08T19:47:48.047+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-05-08T19:47:48.049+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/airflow/dbt_project && dbt deps']
+[2026-05-08T19:47:48.093+0000] {subprocess.py:86} INFO - Output:
+[2026-05-08T19:47:52.916+0000] {subprocess.py:93} INFO - [0m19:47:52  Running with dbt=1.7.14
+[2026-05-08T19:47:53.148+0000] {subprocess.py:93} INFO - [0m19:47:53  Warning: No packages were found in packages.yml
+[2026-05-08T19:47:53.160+0000] {subprocess.py:93} INFO - [0m19:47:53  Warning: No packages were found in packages.yml
+[2026-05-08T19:47:54.938+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-05-08T19:47:54.941+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-05-08T19:47:55.132+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=etl_pipeline, task_id=dbt_deps, execution_date=20260507T000000, start_date=20260508T194747, end_date=20260508T194755
+[2026-05-08T19:47:55.222+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-05-08T19:47:55.393+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-05-08T19:47:55.398+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

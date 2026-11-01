@@ -1,0 +1,8 @@
+version: 2
+
+models:
+  - name: fact_sales
+    columns:
+      - name: weekly_sales
+        tests:
+          - not_null

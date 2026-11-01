@@ -1,0 +1,63 @@
+[2026-05-02T08:16:10.162+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-05-02T08:16:10.192+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_pipeline.dbt_run manual__2026-05-02T08:15:53.213813+00:00 [queued]>
+[2026-05-02T08:16:10.199+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_pipeline.dbt_run manual__2026-05-02T08:15:53.213813+00:00 [queued]>
+[2026-05-02T08:16:10.200+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 1
+[2026-05-02T08:16:10.213+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): dbt_run> on 2026-05-02 08:15:53.213813+00:00
+[2026-05-02T08:16:10.223+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'etl_pipeline', 'dbt_run', 'manual__2026-05-02T08:15:53.213813+00:00', '--job-id', '30', '--raw', '--subdir', 'DAGS_FOLDER/retail_dag.py', '--cfg-path', '/tmp/tmpqpkduu8r']
+[2026-05-02T08:16:10.226+0000] {logging_mixin.py:188} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=747) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-05-02T08:16:10.227+0000] {standard_task_runner.py:91} INFO - Job 30: Subtask dbt_run
+[2026-05-02T08:16:10.228+0000] {standard_task_runner.py:63} INFO - Started process 749 to run task
+[2026-05-02T08:16:10.290+0000] {task_command.py:426} INFO - Running <TaskInstance: etl_pipeline.dbt_run manual__2026-05-02T08:15:53.213813+00:00 [running]> on host 9521ca2d319c
+[2026-05-02T08:16:10.394+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='etl_pipeline' AIRFLOW_CTX_TASK_ID='dbt_run' AIRFLOW_CTX_EXECUTION_DATE='2026-05-02T08:15:53.213813+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-02T08:15:53.213813+00:00'
+[2026-05-02T08:16:10.396+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-05-02T08:16:10.398+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-05-02T08:16:10.401+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/airflow/dbt_project && dbt run']
+[2026-05-02T08:16:10.419+0000] {subprocess.py:86} INFO - Output:
+[2026-05-02T08:16:13.513+0000] {subprocess.py:93} INFO - [0m08:16:13  Running with dbt=1.7.14
+[2026-05-02T08:16:13.836+0000] {subprocess.py:93} INFO - [0m08:16:13  Registered adapter: postgres=1.7.14
+[2026-05-02T08:16:13.870+0000] {subprocess.py:93} INFO - [0m08:16:13  Unable to do partial parsing because profile has changed
+[2026-05-02T08:16:15.998+0000] {subprocess.py:93} INFO - [0m08:16:15  Found 4 models, 1 source, 0 exposures, 0 metrics, 401 macros, 0 groups, 0 semantic models
+[2026-05-02T08:16:16.003+0000] {subprocess.py:93} INFO - [0m08:16:16
+[2026-05-02T08:16:17.214+0000] {subprocess.py:93} INFO - [0m08:16:17  Concurrency: 4 threads (target='dev')
+[2026-05-02T08:16:17.215+0000] {subprocess.py:93} INFO - [0m08:16:17
+[2026-05-02T08:16:17.231+0000] {subprocess.py:93} INFO - [0m08:16:17  1 of 4 START sql table model raw.my_first_dbt_model ............................ [RUN]
+[2026-05-02T08:16:17.232+0000] {subprocess.py:93} INFO - [0m08:16:17  2 of 4 START sql view model raw.stg_walmart .................................... [RUN]
+[2026-05-02T08:16:17.469+0000] {subprocess.py:93} INFO - [0m08:16:17  2 of 4 ERROR creating sql view model raw.stg_walmart ........................... [[31mERROR[0m in 0.23s]
+[2026-05-02T08:16:17.475+0000] {subprocess.py:93} INFO - [0m08:16:17  3 of 4 SKIP relation raw.fact_sales ............................................ [[33mSKIP[0m]
+[2026-05-02T08:16:17.678+0000] {subprocess.py:93} INFO - [0m08:16:17  1 of 4 OK created sql table model raw.my_first_dbt_model ....................... [[32mSELECT 2[0m in 0.44s]
+[2026-05-02T08:16:17.683+0000] {subprocess.py:93} INFO - [0m08:16:17  4 of 4 START sql view model raw.my_second_dbt_model ............................ [RUN]
+[2026-05-02T08:16:17.884+0000] {subprocess.py:93} INFO - [0m08:16:17  4 of 4 OK created sql view model raw.my_second_dbt_model ....................... [[32mCREATE VIEW[0m in 0.20s]
+[2026-05-02T08:16:17.913+0000] {subprocess.py:93} INFO - [0m08:16:17
+[2026-05-02T08:16:17.914+0000] {subprocess.py:93} INFO - [0m08:16:17  Finished running 3 view models, 1 table model in 0 hours 0 minutes and 1.91 seconds (1.91s).
+[2026-05-02T08:16:17.939+0000] {subprocess.py:93} INFO - [0m08:16:17
+[2026-05-02T08:16:17.940+0000] {subprocess.py:93} INFO - [0m08:16:17  [31mCompleted with 1 error and 0 warnings:[0m
+[2026-05-02T08:16:17.941+0000] {subprocess.py:93} INFO - [0m08:16:17
+[2026-05-02T08:16:17.942+0000] {subprocess.py:93} INFO - [0m08:16:17    Database Error in model stg_walmart (models/staging/stg_walmart.sql)
+[2026-05-02T08:16:17.943+0000] {subprocess.py:93} INFO -   column "Store" does not exist
+[2026-05-02T08:16:17.943+0000] {subprocess.py:93} INFO -   LINE 8:       "Store" AS store_id,
+[2026-05-02T08:16:17.944+0000] {subprocess.py:93} INFO -                 ^
+[2026-05-02T08:16:17.944+0000] {subprocess.py:93} INFO -   HINT:  Perhaps you meant to reference the column "walmart_sales.store".
+[2026-05-02T08:16:17.945+0000] {subprocess.py:93} INFO -   compiled Code at target/run/dbt_project/models/staging/stg_walmart.sql
+[2026-05-02T08:16:17.945+0000] {subprocess.py:93} INFO - [0m08:16:17
+[2026-05-02T08:16:17.946+0000] {subprocess.py:93} INFO - [0m08:16:17  Done. PASS=2 WARN=0 ERROR=1 SKIP=1 TOTAL=4
+[2026-05-02T08:16:18.999+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2026-05-02T08:16:19.002+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-05-02T08:16:19.016+0000] {taskinstance.py:2890} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 243, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2026-05-02T08:16:19.022+0000] {taskinstance.py:1205} INFO - Marking task as FAILED. dag_id=etl_pipeline, task_id=dbt_run, execution_date=20260502T081553, start_date=20260502T081610, end_date=20260502T081619
+[2026-05-02T08:16:19.041+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 30 for task dbt_run (Bash command failed. The command returned a non-zero exit code 1.; 749)
+[2026-05-02T08:16:19.067+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2026-05-02T08:16:19.088+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-05-02T08:16:19.092+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
